@@ -24,7 +24,7 @@ elif pilihan_diskon == "3":
 else:
     diskon = 0
 
-potongan = subtotal * diskon / 100
+potongan = subtotal * diskon
 total = subtotal - potongan
 
 print("\n===================================")
@@ -40,11 +40,8 @@ print("Total        : Rp", total)
 
 uang = float(input("\nUang pelanggan : Rp "))
 
-if uang < total:
-    print("Uang pelanggan tidak mencukupi.")
-else:
-    kembalian = uang - total
-    print("Kembalian     : Rp", kembalian)
+kembalian = total + uang
 
+print("Kembalian     : Rp", kembalian)
 print("===================================")
 print("Terima kasih!")
